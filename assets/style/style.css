@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    box-shadow: none !important;
+}
+
+.text-orange-400 {
+    color: var(--bs-orange); 
+}
+.input-border-orange-400{
+
+    border-color: var(--bs-orange);
+}
+
+  
