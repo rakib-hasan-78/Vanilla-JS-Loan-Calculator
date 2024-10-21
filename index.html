@@ -16,27 +16,27 @@
                     <div class="col-md-6 mx-auto">
                         <div class="card card-body text-center mt-5">
                             <h1 class="heading display-5 pb-3 fw-medium">loan calculator</h1>
-                            <form action="#" method="#" id="claculator-form">
+                            <form action="#" method="#" id="calculator-form">
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text cursor-pointer" id="basic-addon"><i class="bi bi-currency-dollar"></i></span>
-                                        <input class="form-control input " type="text" placeholder="loan amount">
+                                        <input class="form-control input " type="text" id="amount" placeholder="loan amount">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text cursor-pointer" id="basic-addon-interest"><i class="bi bi-percent"></i></span>
-                                        <input class="form-control input " type="text" placeholder="loan interest">
+                                        <input class="form-control input " id="loan-interest" type="text" placeholder="loan interest">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <span class="input-group-text cursor-pointer" id="basic-addon-years"><i class="bi bi-calendar2-minus"></i></span>
-                                        <input class="form-control input " type="text" placeholder="years to pay">
+                                        <input class="form-control input" id="years-to-pay" type="text" placeholder="years to pay">
                                     </div>
                                 </div>
                                 <div class="form-group d-grid">
-                                    <input type="submit" value="calculate" class="btn btn-dark">
+                                    <input type="submit" id="btn-submit" value="calculate" class="btn btn-dark">
                                 </div>
                             </form>
                             <!-- loading spinner -->
@@ -48,19 +48,19 @@
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <span class="span input-group-text text-capitalize text-center"> monthly payment  <i class="bi bi-credit-card-2-back mx-2 "></i>  </span>
-                                        <input type="text" class="form-control" disabled>
+                                        <input id="monthly-payment" type="text" class="form-control" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <span class="span input-group-text text-capitalize text-center"> gross payment  <i class="bi bi-cash-coin mx-3 "></i>  </span>
-                                        <input type="text" class="form-control" disabled>
+                                        <input id="gross-payment" type="text" class="form-control" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <span class="span input-group-text text-capitalize text-center"> gross interest  <i class="bi bi-cash-coin mx-3 "></i>  </span>
-                                        <input type="text" class="form-control" disabled>
+                                        <input id="gross-interest" type="text" class="form-control" disabled>
                                     </div>
                                 </div>
                             </div>
