@@ -37,5 +37,5 @@ export const numberRegex = (value, name) => {
         isValid: true,
         error: null
     }
-    
+
 }
