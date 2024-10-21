@@ -7,6 +7,9 @@
 input{
     box-shadow: none !important;
 }
+input:active{
+    border-color: none !important;
+}
 
 .text-orange-400 {
     color: var(--bs-orange); 

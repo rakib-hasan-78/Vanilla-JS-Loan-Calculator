@@ -21,3 +21,23 @@ export const inputFocusHandler = (targetElement, spanElement, inputElement, span
     
 }
 
+export const formClickHandler = (formElement, box, inputElement, spanElementIcon, color) => {
+
+    const form = document.querySelector(formElement);
+    form.addEventListener('click', ()=>{
+        const containers = document.querySelectorAll(box);
+        [...containers].map(container=>{
+            const input = container.querySelector(inputElement);
+            const span = container.querySelector(spanElementIcon);
+    
+            // if input is not focused 
+            if (document.activeElement !== input) {
+                if (!input.value) {
+                    span.classList.remove(color);
+                }
+            }
+    
+        });
+    });
+    
+}

@@ -1,12 +1,14 @@
-export const errorFunction = (text) => {
+export const errorFunction = ( displayActive, displayInActive , text ) => {
 
     const createDiv = document.createElement('div');
-    createDiv.className = `alert alert-danger d-flex align-items-center justify-content-between`;
+    createDiv.className = `alert alert-danger  align-items-center justify-content-between`;
     createDiv.id = 'error-notification';
 
     const createTextSpan = document.createElement('span');
     createTextSpan.id = 'error-text';
-    createTextSpan.innerText =text || '';
+    createTextSpan.innerText = text || '';
+    createDiv.classList.add(displayActive);
+    createDiv.classList.remove(displayInActive);
 
 
     const createSpan = document.createElement('span');
@@ -28,4 +30,10 @@ export const errorFunction = (text) => {
     const card = document.querySelector('.card');
     const heading = document.querySelector('.heading');
     card.insertBefore(createDiv, heading);
+
+    icon.addEventListener('click', ()=>{
+        createDiv.classList.remove('d-flex');
+        createDiv.classList.add('d-none');
+        createTextSpan.innerText= ``;
+    })
 };
