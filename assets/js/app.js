@@ -88,7 +88,7 @@ loanForm.addEventListener('submit', (e)=>{
 
 
         let interestAmount = (((interestRate / 100) * expectedAmount ) * loanYears).toFixed(2);
-        let totalPayment = (expectedAmount +  parseFloat(interestAmount));
+        let totalPayment = (expectedAmount +  parseFloat(interestAmount).toFixed(2));
         let paybackPerMonth = (totalPayment/(loanYears * 12)).toFixed(2);
         
         spinningLoader.classList.remove('d-none');
@@ -111,7 +111,7 @@ loanForm.addEventListener('submit', (e)=>{
             submitBtn.value = 'Reset';
             submitBtn.classList.remove('bg-dark');
             submitBtn.classList.add('bg-danger');
-        }, 4000);
+        }, 2000);
 
     }
 
@@ -168,7 +168,7 @@ const resettingCalculator = () => {
                 yearsToPay.classList.remove('is-valid','is-invalid');
                 const spanChange = document.querySelectorAll('span i');
                 spanChange.forEach(value=>(value.classList.remove('text-success')))
-            }, 4000);
+            }, 2000);
         }
     });
 };

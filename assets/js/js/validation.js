@@ -32,7 +32,7 @@ export const inputValidationHandlers = (targetElement, spanElement, inputElement
                     input.classList.remove('is-invalid');
                     input.classList.add('is-valid');
 
-                    // errorFunction('d-none', 'd-flex', '');
+                    errorFunction('d-none', 'd-flex', '');
 
 
                 } else if (e.target.value==='') {
