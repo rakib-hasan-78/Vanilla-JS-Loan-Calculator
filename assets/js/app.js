@@ -113,7 +113,7 @@ loanForm.addEventListener('submit', (e)=>{
             submitBtn.value = 'Reset';
             submitBtn.classList.remove('bg-dark');
             submitBtn.classList.add('bg-danger');
-        }, 2000);
+        }, 1000);
 
     }
 
@@ -170,7 +170,7 @@ const resettingCalculator = () => {
                 yearsToPay.classList.remove('is-valid','is-invalid');
                 const spanChange = document.querySelectorAll('span i');
                 spanChange.forEach(value=>(value.classList.remove('text-success')))
-            }, 2000);
+            }, 1000);
         }
     });
 };
