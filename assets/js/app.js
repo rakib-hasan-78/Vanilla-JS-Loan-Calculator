@@ -47,19 +47,24 @@ loanForm.addEventListener('submit', (e)=>{
     let isValid = false;
     let error = null;
     let allValid = true;
+    let valid;
     
     // validation logic 
     
     if (loanAmountInput.id==='amount') {
         ({isValid, error}= numberRegex(loanAmountInput.value.trim(), 'Amount'));
+        if (!isValid) throw new CustomError(error);
     }
     if (loanInterest.id ==='loan-interest') {
         ({isValid, error}=numberRegex(loanInterest.value.trim(), 'Interest') )
+        if (!isValid) throw new CustomError(error);
     }
     if (yearsToPay.id==='years-to-pay'){
         ({isValid, error} = numberRegex(yearsToPay.value.trim(), 'Year'))
+        if (!isValid) throw new CustomError(error);
     }
-    
+
+
     try{
         if(!isValid){
             throw new CustomError(error);
@@ -90,7 +95,7 @@ loanForm.addEventListener('submit', (e)=>{
 
 
         let interestAmount = (((interestRate / 100) * expectedAmount ) * loanYears).toFixed(2);
-        let totalPayment = (expectedAmount +  parseFloat(interestAmount).toFixed(2));
+        let totalPayment = (parseFloat(expectedAmount )+  parseFloat(interestAmount)).toFixed(2);
         let paybackPerMonth = (totalPayment/(loanYears * 12)).toFixed(2);
         
         spinningLoader.classList.remove('d-none');
