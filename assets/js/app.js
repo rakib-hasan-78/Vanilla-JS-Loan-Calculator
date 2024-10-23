@@ -52,9 +52,11 @@ loanForm.addEventListener('submit', (e)=>{
     
     if (loanAmountInput.id==='amount') {
         ({isValid, error}= numberRegex(loanAmountInput.value.trim(), 'Amount'));
-    } else if (loanInterest.id ==='loan-interest') {
+    }
+    if (loanInterest.id ==='loan-interest') {
         ({isValid, error}=numberRegex(loanInterest.value.trim(), 'Interest') )
-    } else if (yearsToPay.id==='years-to-pay'){
+    }
+    if (yearsToPay.id==='years-to-pay'){
         ({isValid, error} = numberRegex(yearsToPay.value.trim(), 'Year'))
     }
     
